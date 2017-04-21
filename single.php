@@ -23,7 +23,13 @@ if (have_posts()): the_post();
         <div>
             <div class="blog-details"><?php the_author(); ?></div>
             <div class="blog-details">|</div>
-            <div class="blog-details">Node.js</div>
+            <?php
+            $o_categories = get_the_category();
+            $categories = array_map(function ($cat) {
+                return $cat->name;
+            }, $o_categories);
+            printf('<div class="blog-details">%s</div>', implode(', ', $categories));
+            ?>
             <div class="blog-details">|</div>
             <div class="blog-details"><?php the_date(); ?></div>
         </div>

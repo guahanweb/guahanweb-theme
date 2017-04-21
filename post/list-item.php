@@ -2,7 +2,19 @@
           <a class="blog-link project-link w-inline-block" href="<?php the_permalink(); ?>">
             <div class="blog-image-wrapper">
               <div class="blog-date"><?php the_date(); ?></div>
-              <div class="blog-category nodejs">Node.js</div>
+<?php
+// let's show the first category as a highlight
+$categories = get_the_category();
+$cat = $categories[0];
+
+if ($cat->slug !== 'uncategorized') {
+  $term_id = $cat->term_id;
+  $term_meta = get_option("taxonomy_$term_id");
+  $color = $term_meta['color'];
+
+  printf('<div class="blog-category %s" style="background-color: #%s">%s</div>', $cat->slug, $color, $cat->name);
+}
+?>
               <div class="blog-image"></div>
             </div>
             <div class="blog-title"><?php echo $post->post_title; ?></div>

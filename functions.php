@@ -1,8 +1,10 @@
 <?php
 require __DIR__ . '/inc/author.php';
+require __DIR__ . '/inc/category.php';
 
 // Initialization of parts
 $authorExtras = GW\Theme\Author::instance();
+$categoryExtras = GW\Theme\Category::instance();
 
 // Add this theme's styles
 add_action('wp_enqueue_scripts', 'gw_enqueue_scripts');
