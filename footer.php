@@ -14,5 +14,6 @@
         </div>
       </div>
     </footer>
+    <?php get_template_part('analytics'); ?>
   </body>
 </html>
