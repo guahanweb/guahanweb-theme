@@ -57,10 +57,10 @@ get_header();
             </div>
             <div class="_33block">
                 <div class="w-clearfix">
-                    <a href="#" class="social-block w-inline-block"></a>
-                    <a href="#" class="social-block facebook inline-block"></a>
-                    <a href="#" class="social-block pinterest inline-block"></a>
-                    <a href="#" class="social-block dribbble inline-block"></a>
+                    <a href="https://www.twitter.com/guahanweb" target="_blank" class="social-block w-inline-block"></a>
+                    <a href="https://www.linkedin.com/in/garthhenson" target="_blank" class="social-block linkedin inline-block"></a>
+                    <a href="https://www.github.com/guahanweb" target="_blank" class="social-block github inline-block"></a>
+                    <a href="#" class="social-block email inline-block"></a>
                 </div>
             </div>
         </div>
