@@ -14,7 +14,7 @@ function gw_enqueue_scripts() {
   wp_enqueue_style('guahanweb-css', get_template_directory_uri() . '/css/guahanweb.css');
 
   // scripts
-  wp_enqueue_script('guahanweb-js', get_template_directory_uri() . '/js/guahanweb.js', ['jquery'], null, true);
+  wp_enqueue_script('guahanweb-js', get_template_directory_uri() . '/js/guahanweb.js', ['jquery'], false, true);
 }
 
 // Add admin styles
