@@ -9,8 +9,12 @@ $categoryExtras = GW\Theme\Category::instance();
 // Add this theme's styles
 add_action('wp_enqueue_scripts', 'gw_enqueue_scripts');
 function gw_enqueue_scripts() {
+  // styles
   wp_enqueue_style('google-font-css', 'https://fonts.googleapis.com/css?family=Lato:100,100italic,300,300italic,400,400italic,700,700italic,900,900italic');
   wp_enqueue_style('guahanweb-css', get_template_directory_uri() . '/css/guahanweb.css');
+
+  // scripts
+  wp_enqueue_script('guahanweb-js', get_template_drectory_uri() . '/js/guahanweb.js', ['jquery']);
 }
 
 // Add admin styles

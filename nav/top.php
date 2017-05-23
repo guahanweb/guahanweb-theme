@@ -4,8 +4,7 @@ $pages = array(
     '/' => 'Home',
     '/about' => 'About',
     '/blog' => 'Software',
-    '/photos' => 'Photos',
-    '/contact' => 'Contact'
+    '/photos' => 'Photos'
   );
 
   echo <<<EOM
@@ -26,6 +25,7 @@ EOM;
   }
 
   echo <<<EOM
+      <a href="#" class="contact nav-link w-nav-link">Contact</a>
     </nav>
     <div class="menu-button w-nav-button">
       <div class="w-icon-nav-menu"></div>

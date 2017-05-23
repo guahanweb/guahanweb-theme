@@ -1,4 +1,4 @@
-            <a href="/contact" class="footer-link nav-link contact">Contact</a>
+            <a href="#" class="contact nav-link footer-link">Contact</a>
 <?php
 $pages = array(
   '/photography' => 'Photos',
