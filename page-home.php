@@ -41,7 +41,7 @@ get_header();
             </div>
             <div class="_33block">
                 <a href="/about" class="about hero-tile w-inline-block">
-                    <div class="tile-text">Photos</div>
+                    <div class="tile-text">About</div>
                     <div class="tile-image">
                         <div class="tile-overlay"></div>
                     </div>
