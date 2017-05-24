@@ -20,6 +20,7 @@ function gw_enqueue_scripts() {
 // Add admin styles
 add_action('admin_enqueue_scripts', 'gw_admin_enqueue_scripts');
 function gw_admin_enqueue_scripts() {
+    wp_enqueue_media();
     wp_register_style('gw-admin-css', get_template_directory_uri() . '/css/admin.css');
     wp_enqueue_style('gw-admin-css');
 }

@@ -15,6 +15,20 @@
                 <input type="text" placeholder="Enter hex value" name="term_meta[color]" id="color" value="{{color}}" />
             </div>
         </div>
+        <div class="field">
+            <label for="term_meta[image]">
+                Image
+                <p class="info">This image will be used as the fallback thumbnail for posts</p>
+            </label>
+            <div>
+                <input type="hidden" name="term_meta[image]" id="term_meta[image]" class="custom_media_url" value="{{image_id}}">
+                <div id="category-image-wrapper">{{image}}</div>
+                <p>
+                    <input type="button" class="button button-secondary gw-tax-media-button" id="gw-tax-media-button" value="Add Image">
+                    <input type="button" class="button button-secondary gw-tax-media-remove" id="gw-tax-media-remove" value="Remove Image">
+                </p>
+            </div>
+        </div>
     </main>
 </div>
 
