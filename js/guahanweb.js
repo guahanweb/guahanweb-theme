@@ -16,7 +16,9 @@
     function submitContactForm(e) {
         e.preventDefault();
         e.stopPropagation();
-        console.log($contact_form.val());
+
+        let values = $contact_form.serializeArray();
+        // submit values
     }
 
     function showContactForm(e) {
