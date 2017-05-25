@@ -11,6 +11,12 @@
     el.addEventListener('click', showContactForm);
   });
 
+  console.log('JQUERY:', $);
+  const $contact_form = document.querySelector('form#email-form');
+  function submitContactForm(e) {
+
+  }
+
   function showContactForm(e) {
     e.preventDefault();
     e.stopPropagation();
