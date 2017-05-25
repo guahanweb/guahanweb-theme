@@ -1,4 +1,4 @@
-(function () {
+(function ($) {
   'use strict';
 
   const $contact_overlay = document.querySelector('div.contact-overlay');
@@ -36,4 +36,4 @@
       $contact_overlay.style.display = 'none';
     }, 600);
   }
-})();
+})(jQuery);
