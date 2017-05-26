@@ -17,8 +17,18 @@
         e.preventDefault();
         e.stopPropagation();
 
-        let values = $contact_form.serializeArray();
-        // submit values
+        let data = {};
+        $contact_form.serializeArray().forEach(function (field) {
+            if (field.name == 'name' || field.name == 'email') {
+                data[field.name] = field.value;
+            } else if (field.name == 'project-details') {
+                data.message = field.value;
+            }
+        });
+
+        $.post(GW_AJAXURL, data, function (response) {
+            console.log(response);
+        });
     }
 
     function showContactForm(e) {

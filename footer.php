@@ -14,6 +14,9 @@
         </div>
       </div>
     </footer>
+    <script>
+      var GW_AJAXURL = '<?php echo admin_url('admin-ajax.php'); ?>';
+    </script>
     <?php wp_footer(); ?>
     <?php get_template_part('analytics'); ?>
   </body>
