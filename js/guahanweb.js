@@ -17,7 +17,7 @@
         e.preventDefault();
         e.stopPropagation();
 
-        let data = {};
+        let data = { action: 'gw_send_message' };
         $contact_form.serializeArray().forEach(function (field) {
             if (field.name == 'name' || field.name == 'email') {
                 data[field.name] = field.value;
