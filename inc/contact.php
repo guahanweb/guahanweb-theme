@@ -15,10 +15,16 @@ class Contact {
         add_action('wp_ajax_gw_send_message', array($this, 'sendMessage'));
         add_action('wp_ajax_nopriv_gw_send_message', array($this, 'sendMessage'));
         add_action('wp_mail_content_type', array($this, 'getContentType'));
+
+        add_action('wp_mail_failed', array($this, 'handleMailFailure'));
     }
 
     public function getContentType() {
         return 'text/html';
+    }
+
+    public function handleMailFailure($err) {
+        // var_dump($err);
     }
 
     public function sendMessage() {
@@ -41,10 +47,11 @@ class Contact {
             $headers = sprintf('From: %s <%s>', $name, $email);
             $subject = 'guahanweb.com | New message from ' . $name;
 
-            $contents = file_get_contents('./contact/template.html');
+            $contents = file_get_contents(__DIR__ . '/contact/template.html');
             $matches = array('{{name}}', '{{email}}', '{{message}}');
             $replacements = array($name, $email, wpautop($message));
             $html = str_replace($matches, $replacements, $contents);
+            
 
             $mail = wp_mail($to, $subject, $html, $headers);
             if ($mail) {
