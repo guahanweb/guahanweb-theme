@@ -6,7 +6,6 @@
     <meta name="author" content="Garth Henson" />
     <meta name="DC.creator" content="Guahan Web" />
     <?php wp_head(); ?>
-    <?php get_template_part('meta', 'twitter'); ?>
   </head>
   <body>
   <?php get_template_part('content', 'contact'); ?>
