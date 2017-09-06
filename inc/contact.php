@@ -45,7 +45,7 @@ class Contact {
 
             $to = get_option('admin_email');
             $headers  = array(
-                "From: Guahanweb Admin <admin@guahanweb.com>",
+                sprintf("From: %s <%s>", $name, $email),
                 sprintf("Reply-To: %s <%s>", $name, $email)
             );
             $subject  = 'guahanweb.com | New message from ' . $name;
