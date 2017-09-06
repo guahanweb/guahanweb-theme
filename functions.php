@@ -32,3 +32,20 @@ add_action('get_header', 'remove_admin_login_header');
 function remove_admin_login_header() {
     remove_action('wp_head', '_admin_bar_bump_cb');
 }
+
+// Set up SMPT email
+// Expects constants to be set in wp-config.php
+add_action('phpmailer_init', 'send_smtp_email');
+function send_smtp_email($phpmailer) {
+    if (defined('SMTP_HOST')) {
+        $phpmailer->isSMTP();
+        $phpmailer->Host = SMTP_HOST;
+        $phpmailer->SMTPAuth = SMPT_AUTH;
+        $phpmailer->Port = SMPT_PORT;
+        $phpmailer->Username = SMTP_USER;
+        $phpmailer->Password = SMTP_PASS;
+        $phpmailer->SMTPSecure = SMTP_SECURE;
+        $phpmailer->From = SMTP_FROM;
+        $phpmailer->FromName = SMTP_NAME;
+    }
+}
