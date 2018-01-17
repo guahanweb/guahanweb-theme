@@ -41,6 +41,7 @@ class Category {
     }
 
     public function setupTheme() {
+        add_theme_support('post-thumbnails');
         add_image_size('gw-card-thumb', 0, 180); // crop to 180px tall for use in our responsive card summaries
     }
 
